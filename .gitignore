@@ -1,0 +1,59 @@
+# Operating System
+.DS_Store
+Thumbs.db
+
+# Editor & IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary & Log files
+*.log
+tmp/
+temp/
+*.tmp
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.pfx
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform / OpenTofu
+.terraform/
+.terraform.lock.hcl
+
+# Kubernetes / Helm
+*.kubeconfig
+kubeconfig*
+.helm/
+
+# Containers & Builds
+dist/
+build/
+bin/
+*.tar
+*.tar.gz
+
+# Python & Node
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

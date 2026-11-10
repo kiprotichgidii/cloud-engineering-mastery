@@ -92,41 +92,41 @@ The complete 24-week engineering curriculum is organized into modular directorie
 
 | Month | Domain Focus | Engineering Deliverable | Directory |
 |---|---|---|---|
-| **Month 1** | Container internals & runtime engineering | Container runtime lab, image build pipeline, isolation demos | [`labs/month-01-container-internals/`](labs/month-01-container-internals/README.md) |
-| **Month 2** | Container orchestration & Kubernetes internals | Kubeadm cluster, runtime integration, scheduling experiments | [`labs/month-02-kubernetes-internals/`](labs/month-02-kubernetes-internals/README.md) |
-| **Month 3** | Cloud-native networking & storage | CNI experiments, eBPF observability, CSI & Ceph recovery | [`labs/month-03-networking-storage/`](labs/month-03-networking-storage/README.md) |
-| **Month 4** | Container platforms & application delivery | GitOps application platform & image-to-production pipeline | [`labs/month-04-platform-engineering/`](labs/month-04-platform-engineering/README.md) |
-| **Month 5** | Cloud-native security & cloud infrastructure | Secured AWS/EKS platform, workload identity & supply chain | [`labs/month-05-cloud-security/`](labs/month-05-cloud-security/README.md) |
-| **Month 6** | Production operations & reliability engineering | Observable, load-tested platform with SLOs & DR evidence | [`labs/month-06-production-engineering/`](labs/month-06-production-engineering/README.md) |
+| **Month 1** | Container internals & runtime engineering | Container runtime lab, image build pipeline, isolation demos | [`labs/container-internals/`](labs/container-internals/README.md) |
+| **Month 2** | Container orchestration & Kubernetes internals | Kubeadm cluster, runtime integration, scheduling experiments | [`labs/kubernetes-internals/`](labs/kubernetes-internals/README.md) |
+| **Month 3** | Cloud-native networking & storage | CNI experiments, eBPF observability, CSI & Ceph recovery | [`labs/networking-storage/`](labs/networking-storage/README.md) |
+| **Month 4** | Container platforms & application delivery | GitOps application platform & image-to-production pipeline | [`labs/platform-engineering/`](labs/platform-engineering/README.md) |
+| **Month 5** | Cloud-native security & cloud infrastructure | Secured AWS/EKS platform, workload identity & supply chain | [`labs/cloud-security/`](labs/cloud-security/README.md) |
+| **Month 6** | Production operations & reliability engineering | Observable, load-tested platform with SLOs & DR evidence | [`labs/production-engineering/`](labs/production-engineering/README.md) |
 
 ### 24-Week Laboratory Directory Map
 
 | Week | Focus Area | Labs | Lab Directory |
 |:---:|---|---|:---:|
-| **01** | Linux kernel primitives | `unshare`, minimal rootfs, cgroups v2, capabilities | [labs/month-01/week-01](labs/month-01-container-internals/week-01-linux-primitives/README.md) |
-| **02** | Runtime architecture & OCI | Docker tracing, containerd, OCI bundles, runc vs crun | [labs/month-01/week-02](labs/month-01-container-internals/week-02-runtime-architecture/README.md) |
-| **03** | Image storage & distribution | OCI image dissection, OverlayFS, BuildKit, private registry | [labs/month-01/week-03](labs/month-01-container-internals/week-03-images-and-distribution/README.md) |
-| **04** | Security & runtime hardening | Hardened profiles, seccomp, rootless containers, supply chain | [labs/month-01/week-04](labs/month-01-container-internals/week-04-container-security/README.md) |
-| **05** | CRI, kubelet & lifecycle | CRI inspection, Pod sandbox, runtime comparison, lifecycle failures | [labs/month-02/week-05](labs/month-02-kubernetes-internals/week-05-cri-kubelet/README.md) |
-| **06** | Control plane & controllers | API request audit, etcd snapshots, reconciliation, controller dev | [labs/month-02/week-06](labs/month-02-kubernetes-internals/week-06-control-plane/README.md) |
-| **07** | Scheduling & placement | Scheduler decisions, resource contention, placement policy, HPA | [labs/month-02/week-07](labs/month-02-kubernetes-internals/week-07-scheduling/README.md) |
-| **08** | Operations & recovery | Cluster upgrades, node failure, control plane recovery, certs | [labs/month-02/week-08](labs/month-02-kubernetes-internals/week-08-operations-recovery/README.md) |
-| **09** | Linux container networking | veth pairs & bridges, routing/NAT, packet capture, troubleshooting | [labs/month-03/week-09](labs/month-03-networking-storage/week-09-linux-networking/README.md) |
-| **10** | CNI, Cilium & eBPF | Cilium install, Hubble tracing, network policies, Calico comparison | [labs/month-03/week-10](labs/month-03-networking-storage/week-10-cni-cilium-ebpf/README.md) |
-| **11** | DNS, Ingress & Gateway API | CoreDNS resolution, DNS failures, Gateway API, Istio mTLS | [labs/month-03/week-11](labs/month-03-networking-storage/week-11-dns-gateway-mesh/README.md) |
-| **12** | CSI & distributed storage | PVC lifecycle, Rook-Ceph, storage failure recovery, benchmarking | [labs/month-03/week-12](labs/month-03-networking-storage/week-12-csi-rook-ceph/README.md) |
-| **13** | Image build & supply chain | Multi-service build, CI pipeline & SBOM, Cosign signing, promotion | [labs/month-04/week-13](labs/month-04-platform-engineering/week-13-image-supply-chain/README.md) |
-| **14** | Helm & Kustomize | Production Helm charts, Kustomize overlays, schema linting, CI tests | [labs/month-04/week-14](labs/month-04-platform-engineering/week-14-helm-kustomize/README.md) |
-| **15** | GitOps delivery | Argo CD bootstrap, ApplicationSets, drift self-healing, Rollouts | [labs/month-04/week-15](labs/month-04-platform-engineering/week-15-gitops-delivery/README.md) |
-| **16** | Platform self-service | Onboarding template, policy checks, self-service portals, multi-app | [labs/month-04/week-16](labs/month-04-platform-engineering/week-16-developer-platform/README.md) |
-| **17** | AWS networking IaC | Multi-AZ VPC OpenTofu, private subnets, security groups, modules | [labs/month-05/week-17](labs/month-05-cloud-security/week-17-aws-networking/README.md) |
-| **18** | EKS architecture | EKS OpenTofu, VPC CNI & node bootstrap, IRSA/Pod identity, EBS CSI | [labs/month-05/week-18](labs/month-05-cloud-security/week-18-eks-internals/README.md) |
-| **19** | Kubernetes security | Pod Security Standards, Kyverno policies, Falco runtime, Vault | [labs/month-05/week-19](labs/month-05-cloud-security/week-19-workload-security/README.md) |
-| **20** | Multi-tenancy & isolation | Multi-tenant quotas, network boundaries, gVisor/Kata, benchmarks | [labs/month-05/week-20](labs/month-05-cloud-security/week-20-tenancy-isolation/README.md) |
-| **21** | Observability stack | OpenTelemetry instrumentation, Prometheus/Loki/Grafana, tracing | [labs/month-06/week-21](labs/month-06-production-engineering/week-21-observability/README.md) |
-| **22** | Performance engineering | k6 load testing, CPU/memory throttling, perf/eBPF bottlenecks | [labs/month-06/week-22](labs/month-06-production-engineering/week-22-performance/README.md) |
-| **23** | Chaos & disaster recovery | SLIs/SLOs, Chaos Mesh injection, CoreDNS outages, Velero recovery | [labs/month-06/week-23](labs/month-06-production-engineering/week-23-reliability-recovery/README.md) |
-| **24** | Capstone integration | Full platform deploy, app onboarding, compliance audit, game day | [labs/month-06/week-24](labs/month-06-production-engineering/week-24-capstone/README.md) |
+| **01** | Linux kernel primitives | `unshare`, minimal rootfs, cgroups v2, capabilities | [Week 01](labs/container-internals/linux-primitives/README.md) |
+| **02** | Runtime architecture & OCI | Docker tracing, containerd, OCI bundles, runc vs crun | [Week 02](labs/container-internals/runtime-architecture/README.md) |
+| **03** | Image storage & distribution | OCI image dissection, OverlayFS, BuildKit, private registry | [Week 03](labs/container-internals/images-and-distribution/README.md) |
+| **04** | Security & runtime hardening | Hardened profiles, seccomp, rootless containers, supply chain | [Week 04](labs/container-internals/container-security/README.md) |
+| **05** | CRI, kubelet & lifecycle | CRI inspection, Pod sandbox, runtime comparison, lifecycle failures | [Week 05](labs/kubernetes-internals/cri-kubelet/README.md) |
+| **06** | Control plane & controllers | API request audit, etcd snapshots, reconciliation, controller dev | [Week 06](labs/kubernetes-internals/control-plane/README.md) |
+| **07** | Scheduling & placement | Scheduler decisions, resource contention, placement policy, HPA | [Week 07](labs/kubernetes-internals/scheduling/README.md) |
+| **08** | Operations & recovery | Cluster upgrades, node failure, control plane recovery, certs | [Week 08](labs/kubernetes-internals/operations-recovery/README.md) |
+| **09** | Linux container networking | veth pairs & bridges, routing/NAT, packet capture, troubleshooting | [Week 09](labs/networking-storage/linux-networking/README.md) |
+| **10** | CNI, Cilium & eBPF | Cilium install, Hubble tracing, network policies, Calico comparison | [Week 10](labs/networking-storage/cni-cilium-ebpf/README.md) |
+| **11** | DNS, Ingress & Gateway API | CoreDNS resolution, DNS failures, Gateway API, Istio mTLS | [Week 11](labs/networking-storage/dns-gateway-mesh/README.md) |
+| **12** | CSI & distributed storage | PVC lifecycle, Rook-Ceph, storage failure recovery, benchmarking | [Week 12](labs/networking-storage/csi-rook-ceph/README.md) |
+| **13** | Image build & supply chain | Multi-service build, CI pipeline & SBOM, Cosign signing, promotion | [Week 13](labs/platform-engineering/image-supply-chain/README.md) |
+| **14** | Helm & Kustomize | Production Helm charts, Kustomize overlays, schema linting, CI tests | [Week 14](labs/platform-engineering/helm-kustomize/README.md) |
+| **15** | GitOps delivery | Argo CD bootstrap, ApplicationSets, drift self-healing, Rollouts | [Week 15](labs/platform-engineering/gitops-delivery/README.md) |
+| **16** | Platform self-service | Onboarding template, policy checks, self-service portals, multi-app | [Week 16](labs/platform-engineering/developer-platform/README.md) |
+| **17** | AWS networking IaC | Multi-AZ VPC OpenTofu, private subnets, security groups, modules | [Week 17](labs/cloud-security/aws-networking/README.md) |
+| **18** | EKS architecture | EKS OpenTofu, VPC CNI & node bootstrap, IRSA/Pod identity, EBS CSI | [Week 18](labs/cloud-security/eks-internals/README.md) |
+| **19** | Kubernetes security | Pod Security Standards, Kyverno policies, Falco runtime, Vault | [Week 19](labs/cloud-security/workload-security/README.md) |
+| **20** | Multi-tenancy & isolation | Multi-tenant quotas, network boundaries, gVisor/Kata, benchmarks | [Week 20](labs/cloud-security/tenancy-isolation/README.md) |
+| **21** | Observability stack | OpenTelemetry instrumentation, Prometheus/Loki/Grafana, tracing | [Week 21](labs/production-engineering/observability/README.md) |
+| **22** | Performance engineering | k6 load testing, CPU/memory throttling, perf/eBPF bottlenecks | [Week 22](labs/production-engineering/performance/README.md) |
+| **23** | Chaos & disaster recovery | SLIs/SLOs, Chaos Mesh injection, CoreDNS outages, Velero recovery | [Week 23](labs/production-engineering/reliability-recovery/README.md) |
+| **24** | Capstone integration | Full platform deploy, app onboarding, compliance audit, game day | [Week 24](labs/production-engineering/capstone/README.md) |
 
 > 💡 **Detailed Lab Guides:** For complete step-by-step instructions, research questions, implementation code, architecture diagrams, scripts, and troubleshooting guides, navigate directly into each weekly directory or lab module above.
 
@@ -308,52 +308,52 @@ cloud-native-engineering-labs/
 │   │   └── cloud/
 │   └── runbooks/
 ├── labs/
-│   ├── month-01-container-internals/
-│   │   ├── week-01-linux-primitives/
+│   ├── container-internals/
+│   │   ├── linux-primitives/
 │   │   │   ├── lab-01-unshare-namespaces/
 │   │   │   ├── lab-02-minimal-rootfs/
 │   │   │   ├── lab-03-cgroups-v2/
 │   │   │   └── lab-04-capabilities/
-│   │   ├── week-02-runtime-architecture/
+│   │   ├── runtime-architecture/
 │   │   │   ├── lab-01-docker-tracing/
 │   │   │   ├── lab-02-containerd/
 │   │   │   ├── lab-03-oci-bundle/
 │   │   │   └── lab-04-runc-vs-crun/
-│   │   ├── week-03-images-and-distribution/
+│   │   ├── images-and-distribution/
 │   │   │   ├── lab-01-image-dissection/
 │   │   │   ├── lab-02-overlayfs/
 │   │   │   ├── lab-03-buildkit/
 │   │   │   └── lab-04-private-registry/
-│   │   └── week-04-container-security/
+│   │   └── container-security/
 │   │       ├── lab-01-hardened-container/
 │   │       ├── lab-02-seccomp/
 │   │       ├── lab-03-rootless/
 │   │       └── lab-04-supply-chain/
-│   ├── month-02-kubernetes-internals/
-│   │   ├── week-05-cri-kubelet/
-│   │   ├── week-06-control-plane/
-│   │   ├── week-07-scheduling/
-│   │   └── week-08-operations-recovery/
-│   ├── month-03-networking-storage/
-│   │   ├── week-09-linux-networking/
-│   │   ├── week-10-cni-cilium-ebpf/
-│   │   ├── week-11-dns-gateway-mesh/
-│   │   └── week-12-csi-rook-ceph/
-│   ├── month-04-platform-engineering/
-│   │   ├── week-13-image-supply-chain/
-│   │   ├── week-14-helm-kustomize/
-│   │   ├── week-15-gitops-delivery/
-│   │   └── week-16-developer-platform/
-│   ├── month-05-cloud-security/
-│   │   ├── week-17-aws-networking/
-│   │   ├── week-18-eks-internals/
-│   │   ├── week-19-workload-security/
-│   │   └── week-20-tenancy-isolation/
-│   └── month-06-production-engineering/
-│       ├── week-21-observability/
-│       ├── week-22-performance/
-│       ├── week-23-reliability-recovery/
-│       └── week-24-capstone/
+│   ├── kubernetes-internals/
+│   │   ├── cri-kubelet/
+│   │   ├── control-plane/
+│   │   ├── scheduling/
+│   │   └── operations-recovery/
+│   ├── networking-storage/
+│   │   ├── linux-networking/
+│   │   ├── cni-cilium-ebpf/
+│   │   ├── dns-gateway-mesh/
+│   │   └── csi-rook-ceph/
+│   ├── platform-engineering/
+│   │   ├── image-supply-chain/
+│   │   ├── helm-kustomize/
+│   │   ├── gitops-delivery/
+│   │   └── developer-platform/
+│   ├── cloud-security/
+│   │   ├── aws-networking/
+│   │   ├── eks-internals/
+│   │   ├── workload-security/
+│   │   └── tenancy-isolation/
+│   └── production-engineering/
+│       ├── observability/
+│       ├── performance/
+│       ├── reliability-recovery/
+│       └── capstone/
 ├── platform/
 │   ├── infrastructure/
 │   │   ├── modules/

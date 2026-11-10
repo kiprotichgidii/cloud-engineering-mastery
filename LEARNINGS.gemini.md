@@ -21,3 +21,14 @@ This file records immutable, timestamped summaries of each PRAR (Perceive, Reaso
   4. Lab `README.md` (`labs/.../lab-ZZ/`) encapsulates specific reproducible steps, scripts, failure injection scenarios, and evidence checklists.
 - **Act:** Implemented automated parser and generator migrating detailed instructions to Month, Week, and Lab READMEs, and condensing the root `README.md` from 1,222 lines to ~506 lines with clean navigation links.
 - **Refine:** Validated that all 1,200+ relative markdown links across months, weeks, and labs resolve cleanly without broken paths.
+
+---
+
+### [2026-11-10T23:30:00+03:00] - Refactoring: Strip Month & Week Prefixes from Directories
+- **Perceive:** User requested removing `month-XX-` and `week-YY-` prefixes from directory names while preserving all `lab-0x-` prefixes in the lab directories.
+- **Reason:** Designed an atomic git rename strategy:
+  1. Rename week directories inside each month (e.g. `week-01-linux-primitives` -> `linux-primitives`).
+  2. Rename month directories (e.g. `month-01-container-internals` -> `container-internals`).
+  3. Update all cross-references and relative markdown links across root `README.md`, month `README.md`s, and `docs/backlog.md`.
+- **Act:** Executed directory renames using `git mv` and updated references across all relevant markdown documentation.
+- **Refine:** Validated all 1,231 markdown links across the repository with 100% resolution success (0 broken links) and confirmed clean git tracking.

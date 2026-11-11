@@ -16,7 +16,7 @@
 - Mount propagation and filesystem isolation.
 
 ## Hands-on Laboratory Modules
-1. [**Lab 01 Unshare Namespaces**](lab-01-unshare-namespaces/README.md)
+1. [**Lab 01 Linux Namespaces**](lab-01-linux-namespaces/README.md)
 2. [**Lab 02 Minimal Rootfs**](lab-02-minimal-rootfs/README.md)
 3. [**Lab 03 Cgroups V2**](lab-03-cgroups-v2/README.md)
 4. [**Lab 04 Capabilities**](lab-04-capabilities/README.md)

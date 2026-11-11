@@ -6,7 +6,7 @@ Understand containers as operating-system processes with kernel-enforced isolati
 ## Weekly Modules
 
 - [**Week 1: Linux kernel primitives behind containers**](linux-primitives/README.md)
-  - [Lab 01 Unshare Namespaces](linux-primitives/lab-01-unshare-namespaces/README.md)
+  - [Lab 01 Linux Namespaces](linux-primitives/lab-01-linux-namespaces/README.md)
   - [Lab 02 Minimal Rootfs](linux-primitives/lab-02-minimal-rootfs/README.md)
   - [Lab 03 Cgroups V2](linux-primitives/lab-03-cgroups-v2/README.md)
   - [Lab 04 Capabilities](linux-primitives/lab-04-capabilities/README.md)

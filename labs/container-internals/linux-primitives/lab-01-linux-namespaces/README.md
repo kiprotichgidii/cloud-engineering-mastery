@@ -16,8 +16,8 @@ Isolate UTS, PID, mount, IPC and network namespaces with unshare and nsenter
 - Infrastructure: Dedicated homelab VM or isolated sandbox node
 
 ## Architecture
-- Architecture diagram: [diagram.mmd](architecture/diagram.mmd)
-- Component manifests: [`manifests/`](manifests/)
+- Namespace architecture diagram: [namespace-architecture.mmd](diagrams/namespace-architecture.mmd)
+- Veth network diagram: [veth-network.mmd](diagrams/veth-network.mmd)
 
 ## Implementation & Lab Instructions
 Refer to the weekly curriculum specification:
@@ -31,8 +31,8 @@ Refer to the weekly curriculum specification:
 - Document which resources are isolated and which remain shared.
 
 ## Execution Scripts
-- Setup environment: [`scripts/setup.sh`](scripts/setup.sh)
-- Validate implementation: [`scripts/validate.sh`](scripts/validate.sh)
+- Create network namespaces: [`scripts/create-network-namespaces.sh`](scripts/create-network-namespaces.sh)
+- Test connectivity: [`scripts/test-connectivity.sh`](scripts/test-connectivity.sh)
 - Teardown & cleanup: [`scripts/cleanup.sh`](scripts/cleanup.sh)
 
 ## Failure Injection & Troubleshooting
@@ -40,8 +40,11 @@ Refer to the weekly curriculum specification:
 - Root cause analysis and resolution: [troubleshooting.md](troubleshooting.md)
 
 ## Evidence to Collect
-- Terminal output and logs: [`evidence/command-output.md`](evidence/command-output.md)
-- Metric observations and traces: [`evidence/observations.md`](evidence/observations.md)
+- Namespace identifiers: [`evidence/namespace-identifiers.txt`](evidence/namespace-identifiers.txt)
+- PID isolation: [`evidence/pid-isolation.md`](evidence/pid-isolation.md)
+- Mount isolation: [`evidence/mount-isolation.md`](evidence/mount-isolation.md)
+- Network connectivity: [`evidence/network-connectivity.md`](evidence/network-connectivity.md)
+- Packet capture: [`evidence/packet-capture.md`](evidence/packet-capture.md)
 
 ## Technical Article Reference
 **“Linux Containers Under the Hood: Namespaces, cgroups and the Kernel Primitives That Make Isolation Possible”**

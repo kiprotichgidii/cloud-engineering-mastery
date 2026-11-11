@@ -32,3 +32,11 @@ This file records immutable, timestamped summaries of each PRAR (Perceive, Reaso
   3. Update all cross-references and relative markdown links across root `README.md`, month `README.md`s, and `docs/backlog.md`.
 - **Act:** Executed directory renames using `git mv` and updated references across all relevant markdown documentation.
 - **Refine:** Validated all 1,231 markdown links across the repository with 100% resolution success (0 broken links) and confirmed clean git tracking.
+
+---
+
+### [2026-11-11T20:00:00+03:00] - Restructuring: Container-Internals Lab 01 (`lab-01-linux-namespaces`)
+- **Perceive:** User requested updating `labs/container-internals/linux-primitives/lab-01-unshare-namespaces/` to `lab-01-linux-namespaces/` with specialized `scripts/`, `evidence/`, and `diagrams/` files, preserving `README.md` and `troubleshooting.md`.
+- **Reason:** Planned atomic `git mv` rename, removal of unused `architecture/` and `manifests/` directories, creation of dedicated namespace/network scripts (`+x`), evidence logs, and Mermaid diagrams, plus updating cross-references across `README.md`, `labs/container-internals/README.md`, and `labs/container-internals/linux-primitives/README.md`.
+- **Act:** Renamed directory, restructured subdirectories and files, updated internal and external references.
+- **Refine:** Verified exact directory tree, executable script permissions (`-rwxr-xr-x`), and 100% link validity (1,234 links verified).

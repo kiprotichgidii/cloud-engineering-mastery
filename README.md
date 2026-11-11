@@ -310,7 +310,7 @@ cloud-native-engineering-labs/
 ├── labs/
 │   ├── container-internals/
 │   │   ├── linux-primitives/
-│   │   │   ├── lab-01-unshare-namespaces/
+│   │   │   ├── lab-01-linux-namespaces/
 │   │   │   ├── lab-02-minimal-rootfs/
 │   │   │   ├── lab-03-cgroups-v2/
 │   │   │   └── lab-04-capabilities/

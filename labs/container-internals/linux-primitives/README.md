@@ -5,15 +5,21 @@
 ## Weekly Overview
 **Goal:** Deep technical investigation and hands-on laboratory exercises for Week 1.
 
-## Concepts to Investigate
-- Process model, PID namespaces and process trees.
-- Mount, UTS, IPC, network and user namespaces.
-- Namespace membership and `/proc/<pid>/ns`.
-- cgroups v1 versus unified cgroups v2.
-- Resource controllers: CPU, memory, pids and I/O.
-- Linux capabilities and privilege boundaries.
-- `chroot` versus `pivot_root`.
-- Mount propagation and filesystem isolation.
+### Why this week matters
+
+Containers depend on kernel features that provide isolation and resource boundaries. A container runtime combines these features to create an execution environment for a process.
+
+This week starts below the container-engine layer. You will use Linux commands and kernel interfaces directly to create isolated environments and observe what changes from the process's perspective.
+
+The main concepts are:
+
+- Namespaces: isolate a process's view of selected system resources (PID, UTS, mount, IPC, network).
+- Mount operations & root filesystems: construct and control filesystem views with `pivot_root` and mount propagation.
+- Virtual Ethernet devices: connect isolated network stacks using `veth` pairs and `ip netns`.
+- `/proc` and `/sys`: expose process, namespace, and kernel control interfaces.
+- Process IDs: understand how a process can have different PID representations at different namespace levels.
+- cgroups v2: account for and enforce CPU, memory, and PID resource limits.
+- Linux capabilities: constrain root privileges into fine-grained least-privilege boundaries.
 
 ## Hands-on Laboratory Modules
 1. [**Lab 01 Linux Namespaces**](lab-01-linux-namespaces/README.md)
@@ -22,13 +28,12 @@
 4. [**Lab 04 Capabilities**](lab-04-capabilities/README.md)
 
 ### Detailed Curriculum Specifications
-**Lab 1.1 — Build a container-like environment using `unshare`**
-- Create isolated UTS, PID, mount, IPC and network namespaces.
-- Use `unshare` to start a shell in the new namespaces.
-- Mount a separate `/proc` and inspect the process tree.
-- Compare namespace inode identifiers between host and isolated processes.
-- Enter and inspect namespaces with `nsenter`.
-- Document which resources are isolated and which remain shared.
+**[Lab 1.1 — Linux namespaces: understanding process isolation](lab-01-linux-namespaces/README.md)**
+- Inspect existing host namespaces with `lsns` and `/proc/$$/ns/`.
+- Create isolated UTS, PID, mount, network, and IPC namespaces using `unshare`.
+- Mount a separate `/proc`, inspect process trees across host and namespace views, and test mount propagation (`--make-rprivate`).
+- Connect two network namespaces (`ip netns`) with a `veth` pair, test connectivity, and capture ICMP traffic with `tcpdump`.
+- Explore System V IPC isolation (`ipcmk`/`ipcs`) and execute deliberate failure-injection experiments.
 
 **Lab 1.2 — Construct a minimal root filesystem**
 - Create a minimal root filesystem using a small Linux distribution rootfs.
@@ -60,7 +65,7 @@
 - A table mapping container features to Linux kernel primitives.
 
 ## Blog Article Target
-**“Linux Containers Under the Hood: Namespaces, cgroups and the Kernel Primitives That Make Isolation Possible”**
+**“Linux Namespaces Explained: Building Container Isolation from Scratch”** *(Week 1 series focus; broader theme: “Linux Containers Under the Hood: Namespaces, cgroups and the Kernel Primitives That Make Isolation Possible”)*
 
 ## Exit Criteria
 Explain how namespaces isolate views of system resources, how cgroups account for and limit resources, and why neither mechanism alone provides a complete security boundary.

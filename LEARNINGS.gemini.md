@@ -40,3 +40,11 @@ This file records immutable, timestamped summaries of each PRAR (Perceive, Reaso
 - **Reason:** Planned atomic `git mv` rename, removal of unused `architecture/` and `manifests/` directories, creation of dedicated namespace/network scripts (`+x`), evidence logs, and Mermaid diagrams, plus updating cross-references across `README.md`, `labs/container-internals/README.md`, and `labs/container-internals/linux-primitives/README.md`.
 - **Act:** Renamed directory, restructured subdirectories and files, updated internal and external references.
 - **Refine:** Verified exact directory tree, executable script permissions (`-rwxr-xr-x`), and 100% link validity (1,234 links verified).
+
+---
+
+### [2026-11-11T20:45:00+03:00] - Review & Alignment: Container-Internals & Lab 1.1 READMEs
+- **Perceive:** Audited the user's manually updated `labs/container-internals/README.md`, `labs/container-internals/linux-primitives/README.md`, and `labs/container-internals/linux-primitives/lab-01-linux-namespaces/README.md` against the actual directory layout and curriculum.
+- **Reason:** Identified stale `month-01-`/`week-01-` deliverable tree paths, a cross-reference error pointing user namespaces to Lab 1.4 instead of Week 4 Lab 4.3, missing breadcrumb/artifact links in Lab 1.1, leftover `4.x` heading numbering, and Week 1 syllabus/blog title mismatches.
+- **Act:** Aligned all three READMEs and root `README.md` Week 01 summary, updated cross-references (`Lab 1.3`, `Lab 1.4`, `Week 4 Lab 4.3`), and added clickable links to `diagrams/`, `scripts/`, `evidence/`, and `troubleshooting.md`.
+- **Refine:** Verified 1,246 local markdown links across the repository with 0 broken links and confirmed 0 stale `month-0x`/`week-0x` paths in `labs/container-internals/`.

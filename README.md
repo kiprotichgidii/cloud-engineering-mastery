@@ -103,7 +103,7 @@ The complete 24-week engineering curriculum is organized into modular directorie
 
 | Week | Focus Area | Labs | Lab Directory |
 |:---:|---|---|:---:|
-| **01** | Linux kernel primitives | `unshare`, minimal rootfs, cgroups v2, capabilities | [Week 01](labs/container-internals/linux-primitives/README.md) |
+| **01** | Linux kernel primitives | Linux namespaces, minimal rootfs, cgroups v2, capabilities | [Week 01](labs/container-internals/linux-primitives/README.md) |
 | **02** | Runtime architecture & OCI | Docker tracing, containerd, OCI bundles, runc vs crun | [Week 02](labs/container-internals/runtime-architecture/README.md) |
 | **03** | Image storage & distribution | OCI image dissection, OverlayFS, BuildKit, private registry | [Week 03](labs/container-internals/images-and-distribution/README.md) |
 | **04** | Security & runtime hardening | Hardened profiles, seccomp, rootless containers, supply chain | [Week 04](labs/container-internals/container-security/README.md) |
